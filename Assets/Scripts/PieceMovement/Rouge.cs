@@ -15,14 +15,21 @@ public class Rouge : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        
-        if(Input.GetKey(KeyCode.Mouse0) == true)
+        getInput();  
+      
+    }
+    public bool getInput()
+    {
+        bool inputDetected = false;
+        if (Input.GetKey(KeyCode.Mouse0) == true)
         {
             print("Works");
+            inputDetected = true;
         }
         else
         {
             print("Not work");
         }
+        return inputDetected;
     }
 }
